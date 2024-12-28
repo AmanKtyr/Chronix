@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titel %}Contact || Chronix{% endblock titel %}
+
+{% block content %}
+
+
+<section id="contact-us" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold">We’d Love to Hear From You</h2>
+        <p class="text-muted">Feel free to reach out for any queries, feedback, or partnership opportunities.</p>
+      </div>
+      <div class="row gx-5 align-items-stretch">
+        <!-- Left Section: Contact Details -->
+        <div class="col-lg-5 d-flex flex-column justify-content-center p-4 contact-info rounded shadow-lg">
+          <div class="mb-4">
+            <h5><i class="bi bi-geo-alt-fill text-primary me-3"></i>Our Address</h5>
+            <p>Lucknow, Uttar Pradesh, India (226021) </p>
+          </div>
+          <div class="mb-4">
+            <h5><i class="bi bi-envelope-fill text-primary me-3"></i>Email Us</h5>
+            <p><a href="mailto:support@watchstore.com" class="text-decoration-none">support@Chronix.com</a></p>
+          </div>
+          <div class="mb-4">
+            <h5><i class="bi bi-telephone-fill text-primary me-3"></i>Call Us</h5>
+            <p><a href="tel:+1234567890" class="text-decoration-none">+91 6387243245 </a></p>
+          </div>
+          <div>
+            <h5><i class="bi bi-share-fill text-primary me-3"></i>Follow Us</h5>
+            <div class="d-flex">
+              <a href="#" class="text-muted me-3"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="#" class="text-muted me-3"><i class="bi bi-instagram fs-4"></i></a>
+              <a href="#" class="text-muted me-3"><i class="bi bi-twitter fs-4"></i></a>
+              <a href="#" class="text-muted"><i class="bi bi-linkedin fs-4"></i></a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right Section: Contact Form -->
+        <div class="col-lg-7">
+          <form class="p-4 rounded shadow-lg bg-white">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6 mb-4">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="Enter your subject" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2">Send Message</button>
+          </form>
+        </div>
+      </div>
+  
+    
+  </section>
+    <!-- Map Section -->
+    <div class="mt-5 rounded overflow-hidden">
+        {% comment %} <h5 class="text-center mb-3">Our Location</h5> {% endcomment %}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28459.053339343616!2d80.93253082086935!3d26.92311230498832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957b75d9721a9%3A0x7b287d1599f1af94!2sJankipuram%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021!5e0!3m2!1sen!2sin!4v1735216104779!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+  
+
+
+{% endblock content %}
+
+
+
+
+
+

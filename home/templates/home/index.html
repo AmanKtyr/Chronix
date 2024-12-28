@@ -1,0 +1,362 @@
+<!-- templates/home/index.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Chronix{% endblock %}
+
+
+{% block content %}
+
+<div id="watchSlider" class="carousel slide custom-slider" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#watchSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#watchSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#watchSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-2">
+            <h2 class="slider-title">Exclusive Men's Watches</h2>
+            <p class="slider-description">Experience timeless elegance with our latest collection of men's luxury watches.</p>
+            <a href="#" class="btn btn-primary">Shop Now</a>
+          </div>
+          <div class="col-md-6">
+            <img src=" {% static 'images/slider-1.jpg' %}" class="d-block mx-auto slider-image" alt="Men's Watches">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-2">
+            <h2 class="slider-title">Elegant Women's Collection</h2>
+            <p class="slider-description">Discover the perfect blend of sophistication and style in our women's watches.</p>
+            <a href="#" class="btn btn-primary">Explore Collection</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/slider-2.jpg' %}" class="d-block mx-auto slider-image" alt="Women's Watches">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-2">
+            <h2 class="slider-title">Limited Edition Watches</h2>
+            <p class="slider-description">Own a piece of history with our exclusive, limited-edition timepieces.</p>
+            <a href="#" class="btn btn-primary">View Collection</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/slider-3.jpg' %}" class="d-block mx-auto slider-image" alt="Limited Edition Watches">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="carousel-controls">
+        <button class="btn carousel-control-prev" type="button" data-bs-target="#watchSlider" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="btn carousel-control-next" type="button" data-bs-target="#watchSlider" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+      {% comment %} Featured Collections {% endcomment %}
+
+
+      <section id="featured-collections" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Featured Collections</h2>
+          <p class="text-center mb-5 text-muted">Explore our exclusive collections crafted for every occasion.</p>
+          <div class="row g-4">
+            <!-- Men's Watches -->
+            {% for FeaturedCollections in FeaturedCollectionss %}
+            <div class="col-md-4">
+              <div class="card collection-card shadow">
+                <img src="{{FeaturedCollections.image.url}}" class="card-img-top" alt="Men's Watches">
+                <div class="card-body text-center">
+                  <h5 class="card-title">{{FeaturedCollections.name}}</h5>
+                  <p class="card-text text-muted">{{FeaturedCollections.watch_description}}</p>
+                  <a href="{% url 'shop' %}" class="btn btn-primary">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        
+          </div>
+        </div>
+      </section>
+
+      
+      {% comment %} Trending Watches {% endcomment %}
+
+      <section id="trending-watches" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Trending Watches</h2>
+          <p class="text-center mb-5 text-muted">Discover the watches that everyone is talking about.</p>
+          <div class="row g-4">
+            <!-- Watch Card 1 -->
+            <div class="col-md-3">
+              <div class="card shadow-lg border-0">
+                <div class="position-relative">
+                  <img src="{% static 'images/watch2.jpg' %}" class="card-img-top" alt="Classic Leather Watch">
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-2">Classic Leather</h5>
+                  <p class="card-text text-muted">Stylish and durable leather watch.</p>
+                  <div class="d-flex justify-content-center align-items-center mb-3">
+                    <span class="text-muted text-decoration-line-through me-2">₹2499</span>
+                    <span class="text-success fw-bold">₹1990.99</span>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch1Modal">
+                      View Details
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Modal for Watch 1 -->
+            <div class="modal fade" id="watch1Modal" tabindex="-1" aria-labelledby="watch1ModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="watch1ModalLabel">Classic Leather Watch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="{% static 'images/watch2.jpg' %}" class="img-fluid rounded" alt="Classic Leather Watch">
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="fw-bold">₹1990.99</h4>
+                        <p class="text-muted">A sleek leather watch perfect for all occasions.</p>
+                        <h6>Specifications:</h6>
+                        <ul>
+                          <li>Material: Leather</li>
+                          <li>Water Resistance: 30 meters</li>
+                          <li>Warranty: 6 months</li>
+                        </ul>
+                        <div class="d-flex justify-content-start mt-3">
+                          <button class="btn btn-success me-3">Buy Now</button>
+                          <button class="btn btn-outline-primary">Add to Wishlist</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      
+            <!-- Watch Card 2 -->
+            <div class="col-md-3">
+              <div class="card shadow-lg border-0">
+                <div class="position-relative">
+                  <img src="{% static 'images/watch1.jpg' %}" class="card-img-top" alt="Primary Edition">
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-2"> Classic Leather</h5>
+                  <p class="card-text text-muted">Bold and elegant design.</p>
+                  <div class="d-flex justify-content-center align-items-center mb-3">
+                    <span class="text-muted text-decoration-line-through me-2">₹4499</span>
+                    <span class="text-success fw-bold">₹3490.99</span>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal">
+                      View Details
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Modal for Watch 2 -->
+            <div class="modal fade" id="watch2Modal" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="watch2ModalLabel">Leather Edition</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <img src="{% static 'images/watch1.jpg' %}" class="img-fluid rounded" alt="Primary Edition">
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="fw-bold">₹3490.99</h4>
+                        <p class="text-muted">Bold design, ideal for a statement look.</p>
+                        <h6>Specifications:</h6>
+                        <ul>
+                          <li>Material: Alloy</li>
+                          <li>Water Resistance: 70 meters</li>
+                          <li>Warranty: 1 year</li>
+                        </ul>
+                        <div class="d-flex justify-content-start mt-3">
+                          <button class="btn btn-success me-3">Buy Now</button>
+                          <button class="btn btn-outline-primary">Add to Wishlist</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+       <!-- Watch Card 3 -->
+       <div class="col-md-3">
+        <div class="card shadow-lg border-0">
+          <div class="position-relative">
+            <img src="{% static 'images/watch5.webp' %}" class="card-img-top" alt="Primary Edition">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title mb-2">Luxury  Edition</h5>
+            <p class="card-text text-muted">premium and elegant design.</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+              <span class="text-muted text-decoration-line-through me-2">₹4499</span>
+              <span class="text-success fw-bold">₹3490.99</span>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal">
+                View Details
+              </button>
+              <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Watch 3 -->
+      <div class="modal fade" id="watch2Modal" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="watch2ModalLabel">Luxury  Edition</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="{% static 'images/watch5.webp' %}" class="img-fluid rounded" alt="Primary Edition">
+                </div>
+                <div class="col-md-6">
+                  <h4 class="fw-bold">₹3490.99</h4>
+                  <p class="text-muted">premium design, ideal for a statement look.</p>
+                  <h6>Specifications:</h6>
+                  <ul>
+                    <li>Material: Alloy</li>
+                    <li>Water Resistance: 70 meters</li>
+                    <li>Warranty: 1 year</li>
+                  </ul>
+                  <div class="d-flex justify-content-start mt-3">
+                    <button class="btn btn-success me-3">Buy Now</button>
+                    <button class="btn btn-outline-primary">Add to Wishlist</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+       <!-- Watch Card 4  -->
+       <div class="col-md-3">
+        <div class="card shadow-lg border-0">
+          <div class="position-relative">
+            <img src="{% static 'images/watch3.webp' %}" class="card-img-top" alt="Primary Edition">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title mb-2">Sports watch</h5>
+            <p class="card-text text-muted">Bold and durable design.</p>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+              <span class="text-muted text-decoration-line-through me-2">₹4499</span>
+              <span class="text-success fw-bold">₹3490.99</span>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal">
+                View Details
+              </button>
+              <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Watch 4 -->
+      <div class="modal fade" id="watch2Modal" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="watch2ModalLabel">Sport watch</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="{% static 'images/watch3.webp' %}" class="img-fluid rounded" alt="Primary Edition">
+                </div>
+                <div class="col-md-6">
+                  <h4 class="fw-bold">₹3490.99</h4>
+                  <p class="text-muted">Bold and durable design, ideal for a statement look.</p>
+                  <h6>Specifications:</h6>
+                  <ul>
+                    <li>Material: Alloy</li>
+                    <li>Water Resistance: 70 meters</li>
+                    <li>Warranty: 1 year</li>
+                  </ul>
+                  <div class="d-flex justify-content-start mt-3">
+                    <button class="btn btn-success me-3">Buy Now</button>
+                    <button class="btn btn-outline-primary">Add to Wishlist</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+
+
+          </div>
+        </div>
+      </section>
+      
+
+{% endblock %}

@@ -1,0 +1,475 @@
+/* Navbar Background */
+.custom-navbar {
+    background: linear-gradient(90deg, #000000, #333333);
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Brand Styling */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-logo {
+    /* width: 120px; */
+    height: 60px;
+    border-radius: 10%;
+  }
+  .brand-name {
+    color: #FFD700;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+  /* Navigation Links */
+  .nav-link {
+    font-size: 1rem;
+    color: #FFFFFF;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-link:hover {
+    color: #FFD700;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    left: 50%;
+    bottom: -4px;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    background-color: #1a1a1a;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  .dropdown-item {
+    color: #FFD700;
+    transition: all 0.3s ease;
+  }
+  .dropdown-item:hover {
+    background-color: #FFD700;
+    color: #000000;
+  }
+  
+
+  
+
+  /* slider */
+
+.custom-slider {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+  }
+  
+  /* Slider Title and Description */
+  .slider-title {
+    font-size: 2.5rem;
+    color: #FFD700;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .slider-description {
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background-color: #FFD700;
+    color: #000000;
+    border: none;
+    padding: 0.3srem 1.3rem;
+    font-size: 1rem;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-primary:hover {
+    background-color: #000000;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+  }
+
+
+  .btn-success {
+    background-color: #000000;
+    color: #FFD700;
+    border: none;
+    padding: 0.3srem 1.3rem;
+    font-size: 1rem;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .btn-success:hover {
+    background-color: #FFD700;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+  
+  /* Slider Image */
+  .slider-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  /* Carousel Controls */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+
+ /* Carousel Controls Container */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Styling for Buttons */
+  .carousel-controls .btn {
+    margin: 300px 10px;
+    background-color: #FFD700;
+    color: #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-controls .btn:hover {
+    transform: scale(1.1);
+    background-color: #a72929;
+    color: #FFD700;
+  }
+  
+  /* Icons inside buttons */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    .slider-title {
+      font-size: 2rem;
+    }
+    .slider-description {
+      font-size: 1rem;
+    }
+    .btn-primary {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+
+
+  /* Featured Collections */
+  #featured-collections {
+    background-color: #f8f9fa;
+  }
+  
+  #featured-collections h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+  }
+  
+  #featured-collections .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  #featured-collections .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  #featured-collections .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 330px;
+    object-fit: cover;
+  }
+  
+  /* #featured-collections .btn-primary {
+    background-color: #FFD700;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  #featured-collections .btn-primary:hover {
+    background-color: #000;
+    color: #FFD700;
+  } */
+
+  
+
+  /* Trending Watches */
+
+  #trending-watches {
+    background-color: #f9f9f9;
+  }
+  
+  #trending-watches h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+  }
+  
+  #trending-watches .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  #trending-watches .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  #trending-watches .card img {
+    height: 277px;
+    object-fit: cover;
+  }
+  
+  #trending-watches .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  #trending-watches .card-text {
+    color: #6c757d;
+  }
+  
+ 
+
+
+  /* footer */
+  /* Footer Styling */
+.footer {
+    /* background: linear-gradient(135deg, #a1c4fd, #c2e9fb);  */
+    background-color: #000000;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: #f8f9fa;
+  }
+  
+  .footer h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Light text for headers */
+  }
+  
+  .footer p {
+    font-size: 1rem;
+    color: #d6d6d6;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: #f8f9fa;
+    transition: color 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #e2e917; /* Warm coral hover effect */
+    transform: translateX(5px);
+    padding-left: 5px; /* Adds subtle movement */
+  }
+  
+  .footer-link {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .footer .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #444; /* Neutral background for icons */
+    border-radius: 50%;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer .social-icon:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    color: #ffffff;
+    background-color: #1761e9; /* Coral background on hover */
+}
+
+  
+
+ 
+  
+  @media (max-width: 768px) {
+    .footer .row {
+      text-align: center;
+    }
+  
+    .footer .social-icons {
+      justify-content: center;
+    }
+  
+    .footer h5 {
+      font-size: 1.1rem;
+    }
+  }
+  
+
+  /* shop */
+
+  .product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#products
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.filter-section
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product-card img
+{
+  width: 100%; 
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+.watch_tyle
+{
+  color: #1378dd;
+}
+
+.watch_for
+{
+  padding-right: 10px;
+}
+.card-price
+{
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+/* about page */
+
+
+/* Container Styling */
+.team-section {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Team Member Cards */
+.team-member {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.team-member:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Circle Image */
+.team-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Overlay Details on Hover */
+.team-member-details {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.team-member:hover .team-member-details {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}

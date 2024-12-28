@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+About || Chronix
+{% endblock title %}
+
+{% block content %}
+<section class="about-section">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+          <img src="{% static 'images/about-2.gif' %}" alt="About Chronix" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title mb-4">About Chronix</h2>
+          <p class="about-text mb-3">At Chronix, we offer a curated collection of timeless and luxurious watches that redefine sophistication and style. With a legacy of excellence and a passion for precision, we are committed to helping you find the perfect timepiece that matches your personality and lifestyle.</p>
+          <p class="about-text mb-3">Explore our diverse range of watches, crafted with exceptional craftsmanship and attention to detail. Whether you seek elegance, durability, or exclusivity, Chronix has it all.</p>
+          <a href="/shop" class="btn btn-primary px-4 py-2">Explore Our Collection</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="team-section py-5" style="background: #f7f7f7;">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 text-uppercase font-weight-bold text-dark">Meet Our Team</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="team-member rounded shadow-lg bg-white p-4 position-relative">
+            <img src="{% static 'images/aman katiyar.jpg' %}" alt="Aman Katiyar" class="img-fluid rounded-circle mb-3 team-img">
+            <h5 class="team-name text-dark font-weight-bold">Aman Katiyar</h5>
+            <p class="team-role text-muted">Founder & CEO</p>
+            <div class="team-member-details position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center">
+              <p class="text-white">A visionary leader shaping the future of our company.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="team-member rounded shadow-lg bg-white p-4 position-relative">
+            <img src=" {% static 'images/sonu.jpeg' %}" alt="Sonu Sahani" class="img-fluid rounded-circle mb-3 team-img">
+            <h5 class="team-name text-dark font-weight-bold">Sonu Sahani</h5>
+            <p class="team-role text-muted">Design Lead</p>
+            <div class="team-member-details position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center">
+              <p class="text-white">Crafting stunning designs that leave a lasting impact.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="team-member rounded shadow-lg bg-white p-4 position-relative">
+            <img src="{% static 'images/Tushar.png' %}" alt="Tushar Jain" class="img-fluid rounded-circle mb-3 team-img">
+            <h5 class="team-name text-dark font-weight-bold">Tushar Jain</h5>
+            <p class="team-role text-muted">Marketing Head</p>
+            <div class="team-member-details position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center">
+              <p class="text-white">Driving innovative strategies to grow our brand.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="vision-section">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-4">Our Vision</h2>
+          <p class="about-text mb-3">At Chronix, we envision a world where timepieces are not just instruments to tell time, but a reflection of one's identity and style. We strive to lead the industry by innovating and delivering products that inspire confidence and sophistication.</p>
+          <p class="about-text mb-3">Our goal is to create a legacy that resonates with generations, blending tradition with modernity in every design.</p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="{% static 'images/Our Vision.gif' %}" alt="Our Vision" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

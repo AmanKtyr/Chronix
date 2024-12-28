@@ -1,0 +1,47 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+      <!-- Brand Logo and Name -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        {% comment %} <img src="{% static 'images/Chronix_logo.png' %}" alt="Brand Logo" class="navbar-logo me-2"> {% endcomment %}
+        <img src="{% static 'images/Chronix-white.png' %}" alt="Brand Logo" class="navbar-logo me-2">
+        {% comment %} <span class="brand-name">Chronix</span> {% endcomment %}
+      </a>
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'shop' %}">Shop</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              <li><a class="dropdown-item" href="#">Men's Watches</a></li>
+              <li><a class="dropdown-item" href="#">Women's Watches</a></li>
+              <li><a class="dropdown-item" href="#">Luxury</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'About' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+        <!-- Call to Action -->
+        <button class="btn btn-primary">Cart</button>
+      </div>
+    </div>
+  </nav>
+  
