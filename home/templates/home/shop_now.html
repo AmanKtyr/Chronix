@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container ">
+    <h2 class="section-title text-center mb-5 text-uppercase font-weight-bold text-dark">Selected Product</h2>
+    <div class="card mb-3 ">
+        <div class="row  ">
+            <div class="col-md-4 ">
+                <img src="{{ product.image.url|default:'https://via.placeholder.com/300x300' }}" class="img-fluid rounded-start " alt="{{ product.name }}">
+            </div>
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">Type: {{ product.watch_type }}</p>
+                    <p class="card-text">For: {{ product.watch_for }}</p>
+                    <p class="card-text">Price: ₹{{ product.price }}</p>
+                   
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Confirm Payment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Total Amount: <strong id="modal-total">₹{{ product.price }}</strong></p>
+                <p>Proceed with payment to finalize your purchase.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

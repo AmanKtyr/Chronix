@@ -10,47 +10,52 @@
         <div class="col-md-4">
             <input type="text" class="form-control" placeholder="Search watches...">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <select class="form-select">
                 <option value="">Sort by Price</option>
                 <option value="low-high">Low to High</option>
                 <option value="high-low">High to Low</option>
             </select>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
             <button type="submit" class="btn btn-secondary w-100">Apply Filters</button>
+        </div>
+        <div class="col-md-3">
+        <button class="btn btn-primary ">
+            <i class="fas fa-shopping-cart"></i>
+            <span><span id="cart-count">0</span> items</span>
+            <span id="cart-total">Total: ₹ 0</span>
         </div>
     </form>
 </div>
 
 <!-- Products Section -->
 <div class="container" id="products">
-    <h2 class="text-center mb-4">Exclusive Watches</h2>
+    <h2 class="section-title text-center mb-5 text-uppercase font-weight-bold text-dark">Exclusive Watches</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for product in products %}
         <div class="col-md-3">
             <div class="card product-card">
                 <img src="{{ product.image.url|default:'https://via.placeholder.com/300x300' }}" class="card-img-top" alt="{{ product.name }}">
-                <div class="card-body  text-center">
+                <div class="card-body text-center">
                     <h5 class="card-title">{{ product.name }}</h5>
-                    <span class="watch_tyle">{{ product.watch_type }}</span>
+                    <span class="watch_type">{{ product.watch_type }}</span>
                     <span class="watch_for">{{ product.watch_for }}</span>
                     <br>
                     <span class="card-price">₹ {{ product.price }}</span>
                     <br>
-                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <button class="btn btn-primary add-to-cart" data-product-id="{{ product.id }}"> <i class="fas fa-shopping-cart"></i></button>
+
+                    <a href="{% url 'shop_now' %}?product_id={{ product.id }}" class="btn btn-success">
+                        <i class="fas fa-shopping"></i> Shop Now
+                    </a>
+                    
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
 </div>
-
-
-
-
-
-
 
 
 {% endblock content %}

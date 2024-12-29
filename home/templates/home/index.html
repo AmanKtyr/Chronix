@@ -73,12 +73,47 @@
     </div>
 
 
+    <div class="container py-5">
+      <div class="row text-center gy-4">
+          <!-- Free Shipping -->
+          <div class="col-md-4">
+              <div class="info-card">
+                  <div class="icon-box bg-primary">
+                      <i class="bi bi-truck"></i>
+                  </div>
+                  <h5 class="fw-bold">Free Shipping</h5>
+                  <p class="text-muted">Enjoy free delivery on every order</p>
+              </div>
+          </div>
+          <!-- Support 24/7 -->
+          <div class="col-md-4">
+              <div class="info-card">
+                  <div class="icon-box bg-danger">
+                      <i class="bi bi-headset"></i>
+                  </div>
+                  <h5 class="fw-bold">Support 24/7</h5>
+                  <p class="text-muted">Reach out to us any time, any day</p>
+              </div>
+          </div>
+          <!-- Payment Secure -->
+          <div class="col-md-4">
+              <div class="info-card">
+                  <div class="icon-box bg-warning">
+                      <i class="bi bi-shield-lock"></i>
+                  </div>
+                  <h5 class="fw-bold">Secure Payment</h5>
+                  <p class="text-muted">Your payments are always safe with us</p>
+              </div>
+          </div>
+      </div>
+  </div>
+    
       {% comment %} Featured Collections {% endcomment %}
 
 
       <section id="featured-collections" class="py-5">
         <div class="container">
-          <h2 class="text-center mb-4">Featured Collections</h2>
+          <h2 class="section-title text-center mb-5 text-uppercase font-weight-bold text-dark">Featured Collections</h2>
           <p class="text-center mb-5 text-muted">Explore our exclusive collections crafted for every occasion.</p>
           <div class="row g-4">
             <!-- Men's Watches -->
@@ -104,7 +139,7 @@
 
       <section id="trending-watches" class="py-5">
         <div class="container">
-          <h2 class="text-center mb-4">Trending Watches</h2>
+          <h2 class="section-title text-center mb-5 text-uppercase font-weight-bold text-dark">Trending Watches</h2>
           <p class="text-center mb-5 text-muted">Discover the watches that everyone is talking about.</p>
           <div class="row g-4">
             <!-- Watch Card 1 -->
@@ -124,7 +159,7 @@
                     <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch1Modal">
                       View Details
                     </button>
-                    <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-shopping-cart"></i></button>
                   </div>
                 </div>
               </div>
@@ -181,17 +216,17 @@
                     <span class="text-success fw-bold">₹3490.99</span>
                   </div>
                   <div>
-                    <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal">
+                    <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal2">
                       View Details
                     </button>
-                    <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-shopping-cart"></i></button>
                   </div>
                 </div>
               </div>
             </div>
       
             <!-- Modal for Watch 2 -->
-            <div class="modal fade" id="watch2Modal" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
+            <div class="modal fade" id="watch2Modal2" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -236,21 +271,21 @@
             <h5 class="card-title mb-2">Luxury  Edition</h5>
             <p class="card-text text-muted">premium and elegant design.</p>
             <div class="d-flex justify-content-center align-items-center mb-3">
-              <span class="text-muted text-decoration-line-through me-2">₹4499</span>
-              <span class="text-success fw-bold">₹3490.99</span>
+              <span class="text-muted text-decoration-line-through me-2">₹49,999</span>
+              <span class="text-success fw-bold">39,999</span>
             </div>
             <div>
-              <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal">
+              <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal3">
                 View Details
               </button>
-              <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-shopping-cart"></i></button>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Modal for Watch 3 -->
-      <div class="modal fade" id="watch2Modal" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
+      <div class="modal fade" id="watch2Modal3" tabindex="-1" aria-labelledby="watch2ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -263,7 +298,7 @@
                   <img src="{% static 'images/watch5.webp' %}" class="img-fluid rounded" alt="Primary Edition">
                 </div>
                 <div class="col-md-6">
-                  <h4 class="fw-bold">₹3490.99</h4>
+                  <h4 class="fw-bold">39,999</h4>
                   <p class="text-muted">premium design, ideal for a statement look.</p>
                   <h6>Specifications:</h6>
                   <ul>
@@ -297,14 +332,14 @@
             <h5 class="card-title mb-2">Sports watch</h5>
             <p class="card-text text-muted">Bold and durable design.</p>
             <div class="d-flex justify-content-center align-items-center mb-3">
-              <span class="text-muted text-decoration-line-through me-2">₹4499</span>
-              <span class="text-success fw-bold">₹3490.99</span>
+              <span class="text-muted text-decoration-line-through me-2">₹5499</span>
+              <span class="text-success fw-bold">₹4490.99</span>
             </div>
             <div>
               <button type="button" class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#watch2Modal">
                 View Details
               </button>
-              <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+              <button type="button" class="btn btn-success btn-sm"><i class="fas fa-shopping-cart"></i></button>
             </div>
           </div>
         </div>
@@ -324,7 +359,7 @@
                   <img src="{% static 'images/watch3.webp' %}" class="img-fluid rounded" alt="Primary Edition">
                 </div>
                 <div class="col-md-6">
-                  <h4 class="fw-bold">₹3490.99</h4>
+                  <h4 class="fw-bold">₹4490.99</h4>
                   <p class="text-muted">Bold and durable design, ideal for a statement look.</p>
                   <h6>Specifications:</h6>
                   <ul>
@@ -350,9 +385,6 @@
         </div>
       </section>
       
-
-
-
 
           </div>
         </div>

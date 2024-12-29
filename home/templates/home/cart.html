@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+;{% load static %}
+{% block title %}Cart || Chronix{% endblock title %}
+
+{% block content %}
+<div class="container " >
+<h2 class="section-title text-center mb-5 text-uppercase font-weight-bold text-dark">Your Cart</h2>
+{% if cart_items %}
+    <ul>
+        {% for item in cart_items %}
+            <li>
+                <img src="{{ item.product.imageURL }}" alt="{{ item.product.name }}" width="100">
+                <strong>{{ item.product.name }}</strong> - ₹{{ item.product.price }} 
+                <br> Quantity: {{ item.quantity }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+</div>
+{% endblock content %}

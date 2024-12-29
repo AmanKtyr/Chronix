@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
     <div class="container-fluid">
       <!-- Brand Logo and Name -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
+      <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
         {% comment %} <img src="{% static 'images/Chronix_logo.png' %}" alt="Brand Logo" class="navbar-logo me-2"> {% endcomment %}
         <img src="{% static 'images/Chronix-white.png' %}" alt="Brand Logo" class="navbar-logo me-2">
         {% comment %} <span class="brand-name">Chronix</span> {% endcomment %}
@@ -39,8 +39,14 @@
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
         </ul>
-        <!-- Call to Action -->
-        <button class="btn btn-primary">Cart</button>
+      
+        {% comment %} <button class="btn btn-primary"> {% endcomment %}
+         <a class="nav-link " href="{% url 'admin:index' %}" target="_blank">  <i class="bi bi-power" ></i> </a>
+        {% comment %} </button> {% endcomment %}
+       
+
+        </button>
+    
       </div>
     </div>
   </nav>

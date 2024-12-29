@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import *
 
@@ -21,3 +21,15 @@ def contact(request):
 
 def About(request):
    return render(request, 'home/About.html')
+def cart(request):
+   return render(request, 'home/cart.html')
+
+
+# def shop_now(request):
+#    return render(request, 'home/shop_now.html')
+
+
+def shop_now(request):
+    product_id = request.GET.get('product_id')
+    product = get_object_or_404(Product, id=product_id)
+    return render(request, 'home/shop_now.html', {'product': product})
