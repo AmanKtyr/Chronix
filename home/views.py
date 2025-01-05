@@ -9,10 +9,10 @@ def home(request):
 
 def shop(request):
        try:
-        # Fetch all products from the database
+       
         products = Product.objects.all()
        except Product.DoesNotExist:
-        products = None  # Fallback in case no products are found
+        products = None 
     
        return render(request, 'home/shop.html', {'products': products})
 

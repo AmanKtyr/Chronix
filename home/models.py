@@ -2,14 +2,13 @@ from fileinput import filename
 from django.db import models
 import os
 
-# Define the custom upload path function
 def product_image_path(instance, filename):
     return os.path.join('uploaded_images',filename)
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
     
-    # Choices for watch type
+  
     WATCH_TYPE = [
         ('Analog ', 'Analog Watch'),
         ('Digital ', 'Digital Watch'),
@@ -17,7 +16,7 @@ class Product(models.Model):
     ]
     watch_type = models.CharField(max_length=50, choices=WATCH_TYPE)
     
-    # Choices for target audience (watch_for)
+ 
     WATCH_FOR_CHOICES = [
         ('Men Watch', 'Men Watch'),
         ('Women Watch', 'Women Watch'),
@@ -27,7 +26,7 @@ class Product(models.Model):
     watch_for = models.CharField(max_length=50, choices=WATCH_FOR_CHOICES, default='unisex')
     
     price = models.FloatField()
-    image = models.ImageField(upload_to=product_image_path, null=True, blank=True)  # Use the correct function
+    image = models.ImageField(upload_to=product_image_path, null=True, blank=True)  
     
     def __str__(self):
         return self.name

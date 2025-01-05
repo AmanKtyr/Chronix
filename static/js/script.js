@@ -149,3 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// shop filter section
+k
